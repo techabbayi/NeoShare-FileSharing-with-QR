@@ -16,3 +16,4 @@ NeoShare is a **fast, secure, and easy-to-use** file-sharing web app that allows
 
 ## 🔗 License
 - NeoShare is licensed under the MIT License
+- by Team Sr Digital Telugu Community and ARC47 Contribution...
