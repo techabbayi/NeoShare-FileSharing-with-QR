@@ -1,0 +1,36 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(135deg, #0b132b, #1d3557);
+  color: #ffffff;
+  padding: 20px;
+}
+
+.hero {
+  padding-top: 140px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+
+.footer-home {
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  padding-bottom: 100px;
+  padding-left: 200px;
+}
