@@ -20,7 +20,7 @@ function Send() {
     files.forEach((file) => formData.append("files", file));
 
     try {
-      const response = await axios.post("http://localhost:5000/upload", formData, {
+      const response = await axios.post("https://neoshare-filesharing-with-qr.onrender.com/upload", formData, {
         onUploadProgress: (progressEvent) => {
           const percent = Math.round((progressEvent.loaded / progressEvent.total) * 100);
           setUploadProgress(percent);
@@ -64,7 +64,7 @@ function Send() {
         <div>
           <h2>Share Code: <strong>{shareCode}</strong></h2>
 
-          <QRCodeCanvas value={`http://localhost:5173/receive/${shareCode}`} />
+          <QRCodeCanvas value={`https://neoshare-filesharing-with-qr.onrender.com/receive/${shareCode}`} />
 
           <h3>Files:</h3>
           <ul>
