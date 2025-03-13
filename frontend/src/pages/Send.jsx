@@ -64,7 +64,7 @@ function Send() {
         <div>
           <h2>Share Code: <strong>{shareCode}</strong></h2>
 
-          <QRCodeCanvas value={`https://neoshare-filesharing-with-qr.onrender.com/receive/${shareCode}`} />
+          <QRCodeCanvas value={`https://neoshare.netlify.app/receive/${shareCode}`} />
 
           <h3>Files:</h3>
           <ul>
