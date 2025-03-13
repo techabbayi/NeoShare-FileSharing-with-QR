@@ -4,7 +4,7 @@ import { io } from "socket.io-client";
 import { useParams } from "react-router-dom";
 import { BrowserQRCodeReader } from "@zxing/browser";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://neoshare-filesharing-with-qr.onrender.com");
 
 function Receive() {
   const { code } = useParams();
@@ -36,7 +36,7 @@ function Receive() {
     }
 
     try {
-      const response = await axios.get(`http://localhost:5000/file/${shareCode}`);
+      const response = await axios.get(`https://neoshare-filesharing-with-qr.onrender.com/file/${shareCode}`);
       if (response.data.files.length === 0) {
         setErrorMessage("No files found. Please check the code or contact the sender.");
         setFiles([]);
@@ -52,7 +52,7 @@ function Receive() {
 
   const handleDownloadAll = () => {
     setDownloadProgress(0);
-    window.location.href = `http://localhost:5000/download-all/${shareCode}`;
+    window.location.href = `https://neoshare-filesharing-with-qr.onrender.com/download-all/${shareCode}`;
   };
 
   const startScanning = async () => {
@@ -115,7 +115,7 @@ function Receive() {
             {files.map((file, index) => (
               <li key={index}>
                 {file.name} ({(file.size / 1024).toFixed(2)} MB) - 
-                <a href={`http://localhost:5000/download/${file.id}`} download>
+                <a href={`https://neoshare-filesharing-with-qr.onrender.com/download/${file.id}`} download>
                   Download
                 </a>
               </li>
